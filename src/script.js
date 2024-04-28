@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { gsap } from 'gsap';
 
 const canvas1 = document.querySelector('.webgl1')
 const canvas2 = document.querySelector('.webgl2')
@@ -38,6 +39,13 @@ gltfLoader.load(
         console.log('Computer loaded successfully')
         console.log(gltf)
         scene2.add(gltf.scene)
+        gsap.to(gltf.scene.position, {
+            duration: 1,
+            y: "+=0.1",
+            yoyo: true,
+            repeat: -1,
+            ease: "power1.inOut"
+        })
     },
 )
 
@@ -97,6 +105,9 @@ const tick = () => {
     // Update controls
     controls1.update()
     controls2.update()
+
+    // Update GSAP animations
+    gsap.update();
 
     // Render scene 1
     renderer.render(scene1, camera1)
