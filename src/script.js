@@ -41,7 +41,7 @@ gltfLoader.load(
         scene2.add(gltf.scene)
         gsap.to(gltf.scene.position, {
             duration: 1,
-            y: "+=0.1",
+            y: "+=0.2",
             yoyo: true,
             repeat: -1,
             ease: "power1.inOut"
