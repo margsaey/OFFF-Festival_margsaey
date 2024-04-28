@@ -12,3 +12,5 @@ npm run dev
 # Build for production in the dist/ directory
 npm run build
 ```
+URL host:
+https://offf-festival-margsaey.vercel.app/
