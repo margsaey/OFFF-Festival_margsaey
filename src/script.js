@@ -14,18 +14,6 @@ const gui = new GUI({
     title: 'Cool debug',
     closeFolders: true
 });
-gui.close();
-const debugObject = {};
-const cubeTweaks = gui.addFolder('Cube');
-cubeTweaks.close();
-const cameraTweaks = gui.addFolder('Camera');
-
-window.addEventListener('keydown', (e) => {
-    if(e.key === 'h'){
-        // toggle
-        gui.show(gui._hidden);
-    }
-})
 
 const gltfLoader = new GLTFLoader()
 
