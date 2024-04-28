@@ -9,12 +9,6 @@ const canvas2 = document.querySelector('.webgl2')
 const scene1 = new THREE.Scene()
 const scene2 = new THREE.Scene()
 
-const gui = new GUI({
-    width: 300,
-    title: 'Cool debug',
-    closeFolders: true
-});
-
 const gltfLoader = new GLTFLoader()
 
 let mixer = null;
