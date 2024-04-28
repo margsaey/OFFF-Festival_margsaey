@@ -106,9 +106,6 @@ const tick = () => {
     controls1.update()
     controls2.update()
 
-    // Update GSAP animations
-    gsap.update();
-
     // Render scene 1
     renderer.render(scene1, camera1)
 
